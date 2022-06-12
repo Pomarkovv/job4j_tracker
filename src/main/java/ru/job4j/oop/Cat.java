@@ -8,13 +8,13 @@ public class Cat {
         this.name = nick;
     }
 
+    public void eat(String meat) {
+        this.food = meat;
+    }
+
     public void show() {
         System.out.println(this.food);
         System.out.println(this.name);
-    }
-
-    public void eat(String meat) {
-        this.food = meat;
     }
 
     public static void main(String[] args) {
