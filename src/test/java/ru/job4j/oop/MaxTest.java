@@ -7,7 +7,7 @@ public class MaxTest {
 
     @Test
     public void whenFirst12Second2Third3Fourth6Max12() {
-        int result = Max.max(12,2, 3, 6);
+        int result = Max.max(12, 2, 3, 6);
         int expected = 12;
         Assert.assertEquals(result, expected);
     }
