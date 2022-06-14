@@ -4,10 +4,10 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class StartUI {
-    static Item item = new Item();
-    static LocalDateTime time = item.getCreated();
 
     public static void main(String[] args) {
+        Item item = new Item();
+        LocalDateTime time = item.getCreated();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
         String currentDateTimeFormat = time.format(formatter);
         System.out.println("Текущие дата и время после форматирования: " + currentDateTimeFormat);
