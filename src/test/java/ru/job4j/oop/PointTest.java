@@ -15,7 +15,7 @@ public class PointTest {
     }
 
     @Test
-    public void whenX21Y16Z24then5() {
+    public void whenX21Y16Z24then5dot7() {
         Point a = new Point(2, 1, 2);
         Point b = new Point(1, 6, 4);
         double rsl = a.distance3d(b);
