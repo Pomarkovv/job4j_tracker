@@ -57,7 +57,7 @@ public class Tracker {
     public boolean replace(int id, Item item) {
         boolean isReplaced = false;
         Item el = this.findById(id);
-        if (el != null) {
+        if (el != null && item != null) {
             el.setName(item.getName());
             isReplaced = true;
         }
@@ -68,7 +68,7 @@ public class Tracker {
         boolean isDeleted = false;
         Item el = this.findById(id);
         int index = this.indexOf(id);
-        if (el != null) {
+        if (el != null && id >= 0) {
             System.arraycopy(items, index + 1, items, index, size - index - 1);
             items[size - 1] = null;
             size--;
