@@ -66,9 +66,8 @@ public class Tracker {
 
     public boolean delete(int id) {
         boolean isDeleted = false;
-        Item el = this.findById(id);
         int index = this.indexOf(id);
-        if (el != null && id >= 0) {
+        if (index != -1 && id >= 0) {
             System.arraycopy(items, index + 1, items, index, size - index - 1);
             items[size - 1] = null;
             size--;
