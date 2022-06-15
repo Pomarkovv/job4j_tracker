@@ -38,7 +38,8 @@ public class Tracker {
                 copy[size] = el;
                 size++;
             }
-        } return Arrays.copyOf(copy, size);
+        }
+        return Arrays.copyOf(copy, size);
     }
 
     public Item[] findByName(String key) {
@@ -49,7 +50,8 @@ public class Tracker {
                 copy[i] = items[index];
                 i++;
             }
-        } return Arrays.copyOf(copy, i);
+        }
+        return Arrays.copyOf(copy, i);
     }
 
     public boolean replace(int id, Item item) {
@@ -62,4 +64,16 @@ public class Tracker {
         return isReplaced;
     }
 
+    public boolean delete(int id) {
+        boolean isDeleted = false;
+        Item el = this.findById(id);
+        int index = this.indexOf(id);
+        if (el != null) {
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
+            items[size - 1] = null;
+            size--;
+            isDeleted = true;
+        }
+        return isDeleted;
+    }
 }
