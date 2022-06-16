@@ -27,7 +27,8 @@ public class StartUI {
                 for (Item item : items) {
                     System.out.println(item);
                 }
-            } Item[] items = tracker.findAll();
+            }
+            Item[] items = tracker.findAll();
             if (items.length > 0) {
                 for (Item item : items) {
                     System.out.println(item);
