@@ -49,7 +49,8 @@ public class Tracker {
         boolean isReplaced = false;
         int index = this.indexOf(id);
         if (index != -1) {
-            items[index].setName(item.getName());
+            item.setId(id);
+            items[index] = item;
             isReplaced = true;
         }
         return isReplaced;
