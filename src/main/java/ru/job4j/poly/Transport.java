@@ -1,7 +1,9 @@
 package ru.job4j.poly;
 
 public interface Transport {
-    String drive ();
+    String drive();
+
     int passengers (int pass);
-    double fuel (double price);
+
+    double fuel(double price);
 }
