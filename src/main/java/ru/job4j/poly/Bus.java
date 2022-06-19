@@ -6,3 +6,7 @@ public class Bus implements Venicle {
         System.out.println("I can transport a lot of people!");
     }
 }
+
+
+
+

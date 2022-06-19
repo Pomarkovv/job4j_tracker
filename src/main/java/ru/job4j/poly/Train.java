@@ -6,3 +6,7 @@ public class Train implements Venicle {
         System.out.println("am going too fast!");
     }
 }
+
+
+
+

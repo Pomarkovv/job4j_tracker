@@ -6,3 +6,7 @@ public class Plain implements Venicle {
         System.out.println("am flying so high!");
     }
 }
+
+
+
+
