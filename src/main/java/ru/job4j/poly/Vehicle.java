@@ -1,10 +1,5 @@
 package ru.job4j.poly;
 
-public interface Venicle {
+public interface Vehicle {
     void move();
 }
-
-
-
-
-
