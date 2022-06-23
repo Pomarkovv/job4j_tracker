@@ -6,7 +6,6 @@ import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.nullValue;
 
 public class StartUITest {
-
     @Test
     public void whenExit() {
         Output out = new StubOutput();
