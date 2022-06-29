@@ -33,11 +33,13 @@ public class ValidateInputTest {
     public void whenValidInputTwice() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"1", "1"}
+                new String[] {"1", "3"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
         assertThat(selected, is(1));
+        assertThat(selected, is(3));
+
     }
 
     @Test
