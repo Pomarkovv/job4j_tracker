@@ -8,13 +8,14 @@ private SingleTracker() {
 
 }
 
-public static SingleTracker getInstance(){
+public static SingleTracker getInstance() {
     if (instance == null) {
         instance = new SingleTracker();
     }
     return instance;
 }
-    private Tracker tracker = new Tracker();
+
+private Tracker tracker = new Tracker();
 
     public Item add(Item item) {
         return tracker.add(item);
