@@ -5,3 +5,6 @@ public class Aircraft {
         System.out.println("Метод выводит в консоль модель самолета.");
     }
 }
+
+
+
