@@ -2,6 +2,9 @@ package ru.job4j.tracker;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Item {
     private int id;
@@ -49,5 +52,15 @@ public class Item {
                 + ", name='" + name + '\''
                 + ", created=" + created.format(FORMATTER)
                 + '}';
+    }
+
+    public static void main(String[] args) {
+        List<Item> items = Arrays.asList(
+                new Item("Ivan"),
+                new Item("Petr"),
+                new Item("Ekaterina")
+        );
+        Collections.sort(items, new ItemAscByName());
+        System.out.println(items);
     }
 }
