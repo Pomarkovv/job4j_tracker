@@ -70,7 +70,7 @@ public class BankService {
 
     /**
      * метод описывает процесс перевода денежных средств
-     * от с одного счета на другой
+     * с одного счета на другой
      * @param srcPassport
      * @param srcRequisite
      * @param destPassport
