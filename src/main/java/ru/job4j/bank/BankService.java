@@ -5,13 +5,26 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * класс BankService описывает логику работы банковской системы
+ * поле users - список всех пользователей системы
+ */
 public class BankService {
     private final Map<User, List<Account>> users = new HashMap<>();
 
+    /**
+     * метод addUser добавляет пользователя в систему
+     * @param user
+     */
     public void addUser(User user) {
         users.putIfAbsent(user, new ArrayList<Account>());
     }
 
+    /**
+     * метод addAccount добавляет новый счет пользователя в систему
+     * @param passport
+     * @param account
+     */
     public void addAccount(String passport, Account account) {
         User user = findByPassport(passport);
         if (user != null) {
@@ -22,6 +35,11 @@ public class BankService {
         }
     }
 
+    /**
+     * метод производит поиск пользователя по паспорту
+     * @param passport
+     * @return
+     */
     public User findByPassport(String passport) {
         for (User user : users.keySet()) {
             if (passport.equals(user.getPassport())) {
@@ -31,6 +49,12 @@ public class BankService {
         return null;
     }
 
+    /**
+     * производит поиск счета пр реквизиту
+     * @param passport
+     * @param requisite
+     * @return account
+     */
     public Account findByRequisite(String passport, String requisite) {
         User user = findByPassport(passport);
         if (user != null) {
@@ -44,6 +68,16 @@ public class BankService {
         return null;
     }
 
+    /**
+     * метод описывает процесс перевода денежных средств
+     * от с одного счета на другой
+     * @param srcPassport
+     * @param srcRequisite
+     * @param destPassport
+     * @param destRequisite
+     * @param amount
+     * @return
+     */
     public boolean transferMoney(String srcPassport, String srcRequisite,
                                  String destPassport, String destRequisite, double amount) {
         boolean rsl = false;

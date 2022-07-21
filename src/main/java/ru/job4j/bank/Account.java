@@ -2,6 +2,11 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * класс Account описывает банковский счет пользователя
+ * поле requisite - реквизит счета
+ * поле balance - баланс счета
+ */
 public class Account {
     private String requisite;
     private double balance;
