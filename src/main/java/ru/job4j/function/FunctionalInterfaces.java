@@ -10,8 +10,15 @@ public class FunctionalInterfaces {
     public static void main(String[] args) {
         Map<Integer, String> map = new HashMap<>();
         BiConsumer<Integer, String> biCon = (num, s) -> map.put(num, s);
+        biCon.accept(1, "one");
+        biCon.accept(2, "two");
+        biCon.accept(3, "three");
+        biCon.accept(4, "four");
+        biCon.accept(5, "five");
+        biCon.accept(6, "six");
+        biCon.accept(7, "seven");
 
-        BiPredicate<Integer, String> biPred = (i, s) -> i % 2 == 0 || map.get(i).length() == 4;
+        BiPredicate<Integer, String> biPred = (i, s) -> i % 2 == 0 || map.get(s).length() == 4;
         for (Integer i : map.keySet()) {
             if (biPred.test(i, map.get(i))) {
                 System.out.println("key: " + i + " value: " + map.get(i));
@@ -23,8 +30,7 @@ public class FunctionalInterfaces {
         Consumer<String> con = (s) -> System.out.println(s);
         Function<String, String> func = (s) -> s.toUpperCase();
         for (String s : strings) {
-            con.accept(s);
-            func.apply(s);
+            con.accept(func.apply(s));
         }
     }
 }
