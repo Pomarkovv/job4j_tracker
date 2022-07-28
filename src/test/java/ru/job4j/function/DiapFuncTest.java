@@ -25,8 +25,8 @@ public class DiapFuncTest {
 
     @Test
     public void whenDegreeFunctionThenDegreeResults() {
-        List<Double> result = DiapFunc.diapason(1, 3, x -> Math.pow(x, x));
-        List<Double> expected = Arrays.asList(1D, 4D, 27D);
+        List<Double> result = DiapFunc.diapason(1, 3, x -> Math.pow(2, x));
+        List<Double> expected = Arrays.asList(2D, 4D, 8D);
         assertThat(result, is(expected));
     }
 }
