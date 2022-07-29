@@ -53,14 +53,4 @@ public class Item {
                 + ", created=" + created.format(FORMATTER)
                 + '}';
     }
-
-    public static void main(String[] args) {
-        List<Item> items = Arrays.asList(
-                new Item("Ivan"),
-                new Item("Petr"),
-                new Item("Ekaterina")
-        );
-        Collections.sort(items, new ItemAscByName());
-        System.out.println(items);
-    }
 }
