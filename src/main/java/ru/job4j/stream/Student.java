@@ -1,5 +1,4 @@
 package ru.job4j.stream;
-
 import java.util.Objects;
 
 public class Student {
@@ -9,6 +8,10 @@ public class Student {
 
     public Student(int score, String surname) {
         this.score = score;
+        this.surname = surname;
+    }
+
+    public void setSurname(String surname) {
         this.surname = surname;
     }
 
@@ -30,8 +33,7 @@ public class Student {
         }
         Student student = (Student) o;
         return score == student.score
-                &&
-                Objects.equals(surname, student.surname);
+                && Objects.equals(surname, student.surname);
     }
 
     @Override
