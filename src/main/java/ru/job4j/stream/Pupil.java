@@ -7,3 +7,4 @@ public record Pupil(String name, List<Subject> subjects) {
         return subjects;
     }
 }
+

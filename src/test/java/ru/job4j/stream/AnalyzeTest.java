@@ -164,4 +164,6 @@ class AnalyzeByMapTest {
         );
         assertThat(best).isEqualTo(new Tuple("Math", 250D));
     }
+
+
 }
