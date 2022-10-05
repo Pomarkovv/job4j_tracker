@@ -47,6 +47,7 @@ public class Product {
                 && standard == product.standard
                 && actual == product.actual
                 && Objects.equals(name, product.name);
+
     }
 
     @Override
