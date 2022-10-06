@@ -60,11 +60,11 @@ public class MemTrackerTest {
     @Test
     public void whenReplace() {
         MemTracker memTracker = new MemTracker();
-        Item bug = new Item();
+        Item bug = new Item("First");
         bug.setName("Bug");
         memTracker.add(bug);
         int id = bug.getId();
-        Item bugWithDesc = new Item();
+        Item bugWithDesc = new Item("Second");
         bugWithDesc.setName("Bug with description");
         memTracker.replace(id, bugWithDesc);
         assertThat(memTracker.findById(id).getName(), is("Bug with description"));
@@ -73,7 +73,7 @@ public class MemTrackerTest {
     @Test
     public void whenDelete() {
         MemTracker memTracker = new MemTracker();
-        Item bug = new Item();
+        Item bug = new Item("Bug");
         bug.setName("Bug");
         memTracker.add(bug);
         int id = bug.getId();
